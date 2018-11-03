@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import static itea.homework.Main.*;
 
 public class Chair {
-    void getChair(String name) {
+    synchronized void getChair(String name) {
         try {
             semaphore.acquire();
             print("Deutschen Soldaten " +name + " SIT ON CHAIR", CmdColor.ANSI_CYAN);
